@@ -1,8 +1,8 @@
-#.NET 5 REST API
+# .NET 5 REST API
 
 This is a walk-along project for a course on building web APIs with .NET5, Mongo, Docker.
 
-##How To Run
+## How To Run
 
 Build docker image of a project
 

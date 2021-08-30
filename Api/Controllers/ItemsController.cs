@@ -44,7 +44,7 @@ namespace Catalog.Controllers
         {
             var item = new Item
             {
-                Id = new Guid(),
+                Id =  Guid.NewGuid(),
                 Name = itemDto.Name,
                 Price = itemDto.Price,
                 CreatedDate = DateTimeOffset.UtcNow
@@ -57,7 +57,7 @@ namespace Catalog.Controllers
         }
 
         [HttpPut("{id:guid}")]
-        public async Task<ActionResult> UpdateItem(Guid id, UpdateItemDto itemDto)
+        public async Task<ActionResult> UpdateItemAsync(Guid id, UpdateItemDto itemDto)
         {
             var existingItem = await repository.GetItemAsync(id);
             if (existingItem is null)

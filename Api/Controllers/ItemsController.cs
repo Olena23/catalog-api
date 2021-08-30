@@ -52,6 +52,7 @@ namespace Catalog.Controllers
 
             await repository.CreateItemAsync(item);
 
+            // ReSharper disable once Mvc.ActionNotResolved
             return CreatedAtAction(nameof(GetItemAsync), new { id = item.Id }, item.AsDto());
         }
 
